@@ -9,7 +9,8 @@ import en from '@angular/common/locales/en';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
-import {socialAuth} from "./config/social-auth.config";
+import {socialAuth} from "./providers/social-auth.provider";
+import {provideNzIcons} from './providers/nz-zorro-icons.provider';
 
 registerLocaleData(en);
 
@@ -23,5 +24,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(FormsModule),
     importProvidersFrom(HttpClientModule),
     provideAnimations(),
-    socialAuth]
+    socialAuth,
+    provideNzIcons()]
 };
