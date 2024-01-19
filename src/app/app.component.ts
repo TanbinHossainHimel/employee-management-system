@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
+import {NzIconModule} from 'ng-zorro-antd/icon';
+import {NzLayoutModule} from 'ng-zorro-antd/layout';
+import {NzMenuModule} from 'ng-zorro-antd/menu';
+import {EncryptDecryptService} from "./services/encrypt-decrypt/encrypt-decrypt.service";
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,11 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 })
 export class AppComponent {
   isCollapsed = false;
+
+  constructor(private encryptDecryptService: EncryptDecryptService) {
+    const encryptedValue = this.encryptDecryptService.encryptWithAES256({"userinfo": 'testing encryption'});
+    const decryptedValue = this.encryptDecryptService.decryptWithAES256(encryptedValue);
+
+    console.log(encryptedValue, decryptedValue);
+  }
 }
