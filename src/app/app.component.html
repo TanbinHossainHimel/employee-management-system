@@ -2,30 +2,23 @@
   <nz-sider class="absolute h-[100dvh] lg:relative z-[1000]" nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="50"
             [(nzCollapsed)]="isCollapsed">
     <ul nz-menu nzMode="inline" nzTheme="dark">
-      <li nz-menu-item>
+      <li nz-menu-item [nzDisabled]="true" class="cursor-default flex items-center">
         <span nz-icon>
           <img ngSrc="favicon.ico" alt="logo" height="16" width="16">
         </span>
-        <span class="text-lg font-medium">EMS</span>
+        <span class="text-lg font-medium text-white">EMS</span>
       </li>
       <li nz-menu-item [routerLink]="['/dashboard']" nzMatchRouter="true">
-        <span nz-icon nzType="user"></span>
+        <span nz-icon nzType="dashboard" nzTheme="outline"></span>
         <span>Dashboard</span>
       </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="video-camera"></span>
-        <span>nav 2</span>
-      </li>
-      <li nz-menu-item>
-        <span nz-icon nzType="upload"></span>
-        <span>nav 3</span>
-      </li>
-      <li nz-menu-item>
+      <li nz-menu-item [routerLink]="['/profile']" nzMatchRouter="true">
         <span nz-icon nzType="user"></span>
-        <span>nav 4</span>
+        <span>Profile</span>
       </li>
     </ul>
   </nz-sider>
+
   <nz-layout (click)="isCollapsed=true" class="ml-[50px] lg:ml-0">
     <app-header/>
     <nz-content>

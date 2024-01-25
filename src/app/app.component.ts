@@ -29,8 +29,4 @@ export class AppComponent {
 
     console.log(encryptedValue, decryptedValue);
   }
-
-  toggleCollapsed(): void {
-    this.isCollapsed = !this.isCollapsed;
-  }
 }
