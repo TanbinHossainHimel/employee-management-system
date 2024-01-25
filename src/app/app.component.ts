@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {RouterOutlet} from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {NzIconDirective} from 'ng-zorro-antd/icon';
 import {
   NzContentComponent,
@@ -16,7 +16,7 @@ import {HeaderComponent} from "./header/header.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NzLayoutComponent, NzSiderComponent, NzMenuDirective, NzMenuItemComponent, NzIconDirective, NzHeaderComponent, NzContentComponent, NzFooterComponent, NgOptimizedImage, HeaderComponent],
+  imports: [CommonModule, RouterOutlet, NzLayoutComponent, NzSiderComponent, NzMenuDirective, NzMenuItemComponent, NzIconDirective, NzHeaderComponent, NzContentComponent, NzFooterComponent, NgOptimizedImage, HeaderComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

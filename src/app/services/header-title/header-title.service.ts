@@ -4,7 +4,7 @@ import {Injectable, signal, WritableSignal} from '@angular/core';
   providedIn: 'root'
 })
 export class HeaderTitleService {
-  private readonly headerTitle: WritableSignal<string> = signal('title');
+  private readonly headerTitle: WritableSignal<string> = signal('Title');
 
   constructor() {
   }
