@@ -1,5 +1,6 @@
 <nz-layout class="min-h-[100dvh]">
-  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="50">
+  <nz-sider class="absolute h-[100dvh]" nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="50"
+            [(nzCollapsed)]="isCollapsed">
     <ul nz-menu nzMode="inline" nzTheme="dark">
       <li nz-menu-item>
         <span nz-icon>
@@ -25,7 +26,7 @@
       </li>
     </ul>
   </nz-sider>
-  <nz-layout>
+  <nz-layout (click)="isCollapsed=true">
     <nz-header class="bg-white"></nz-header>
     <nz-content>
       <div class="p-5">
