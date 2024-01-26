@@ -9,14 +9,14 @@ import {
   NzLayoutComponent,
   NzSiderComponent
 } from 'ng-zorro-antd/layout';
-import {NzMenuDirective, NzMenuItemComponent} from 'ng-zorro-antd/menu';
+import {NzMenuDirective, NzMenuItemComponent, NzSubMenuComponent} from 'ng-zorro-antd/menu';
 import {EncryptDecryptService} from "./services/encrypt-decrypt/encrypt-decrypt.service";
 import {HeaderComponent} from "./header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NzLayoutComponent, NzSiderComponent, NzMenuDirective, NzMenuItemComponent, NzIconDirective, NzHeaderComponent, NzContentComponent, NzFooterComponent, NgOptimizedImage, HeaderComponent, RouterLink],
+  imports: [CommonModule, RouterOutlet, NzLayoutComponent, NzSiderComponent, NzMenuDirective, NzMenuItemComponent, NzIconDirective, NzHeaderComponent, NzContentComponent, NzFooterComponent, NgOptimizedImage, HeaderComponent, RouterLink, NzSubMenuComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

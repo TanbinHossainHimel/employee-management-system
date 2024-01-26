@@ -9,12 +9,34 @@
         <span class="text-lg font-medium text-white">EMS</span>
       </li>
       <li nz-menu-item [routerLink]="['/dashboard']" nzMatchRouter="true">
-        <span nz-icon nzType="dashboard" nzTheme="outline"></span>
+        <span nz-icon nzType="home" nzTheme="outline"></span>
         <span>Dashboard</span>
       </li>
-      <li nz-menu-item [routerLink]="['/profile']" nzMatchRouter="true">
-        <span nz-icon nzType="user"></span>
-        <span>Profile</span>
+      <li nz-submenu nzTitle="Profile" nzIcon="user">
+        <ul>
+          <li nz-menu-item [routerLink]="['/profile', 'my-profile']" [nzMatchRouter]="true">My Profile</li>
+          <li nz-menu-item [routerLink]="['/profile', 'my-attendance']" [nzMatchRouter]="true">My Attendance</li>
+          <li nz-menu-item [routerLink]="['/profile', 'my-leave']" [nzMatchRouter]="true">My Leave</li>
+          <li nz-menu-item [routerLink]="['/profile', 'my-team']" [nzMatchRouter]="true">My Team</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Team" nzIcon="team">
+        <ul>
+          <li nz-menu-item>Team Member</li>
+          <li nz-menu-item>Team Attendance</li>
+          <li nz-menu-item>Team Leave</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Settings" nzIcon="setting">
+        <ul>
+          <li nz-menu-item>Option 11</li>
+          <li nz-menu-item>Option 12</li>
+          <li nz-menu-item>Option 13</li>
+        </ul>
+      </li>
+      <li nz-menu-item>
+        <span nz-icon nzType="logout" nzTheme="outline"></span>
+        <span>Logout</span>
       </li>
     </ul>
   </nz-sider>
@@ -22,7 +44,7 @@
   <nz-layout (click)="isCollapsed=true" class="ml-[50px] lg:ml-0">
     <app-header/>
     <nz-content>
-      <div class="p-5">
+      <div class="p-3">
         <router-outlet/>
       </div>
     </nz-content>
