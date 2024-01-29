@@ -12,6 +12,12 @@
         <span nz-icon nzType="home" nzTheme="outline"></span>
         <span>Dashboard</span>
       </li>
+      <li nz-submenu nzTitle="HR" nzIcon="audit">
+        <ul>
+          <li nz-menu-item [routerLink]="['/hr', 'employees']" [nzMatchRouter]="true">Employees</li>
+          <li nz-menu-item [routerLink]="['/hr', 'leaves']" [nzMatchRouter]="true">Leaves</li>
+        </ul>
+      </li>
       <li nz-submenu nzTitle="Profile" nzIcon="user">
         <ul>
           <li nz-menu-item [routerLink]="['/profile', 'my-profile']" [nzMatchRouter]="true">My Profile</li>
