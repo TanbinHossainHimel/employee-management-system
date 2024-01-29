@@ -1,1 +1,17 @@
-<p>employees works!</p>
+<div class="flex flex-col gap-2">
+  <div>
+    <button nz-button (click)="fileUpload.click()">
+      <span nz-icon nzType="upload"></span>
+      <span>Upload</span>
+    </button>
+    <input type="file" class="hidden" #fileUpload (change)="onChangeFileUpload($event)" accept=".csv">
+  </div>
+
+  @if (file) {
+    <nz-tag [nzColor]="'green'" class="flex items-center gap-2">
+      <p class="truncate">{{ file.name }}</p>
+      <div class="flex-auto"></div>
+      <span nz-icon nzType="delete" nzTheme="outline" (click)="onClickDelete()"></span>
+    </nz-tag>
+  }
+</div>

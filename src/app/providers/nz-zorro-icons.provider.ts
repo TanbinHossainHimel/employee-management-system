@@ -3,13 +3,15 @@ import {NzIconModule} from 'ng-zorro-antd/icon';
 import {IconDefinition} from '@ant-design/icons-angular';
 import {
   UserOutline,
-  DashboardOutline
+  DashboardOutline,
+  UploadOutline
 } from '@ant-design/icons-angular/icons';
 
 
 const icons: IconDefinition[] = [
   UserOutline,
-  DashboardOutline
+  DashboardOutline,
+  UploadOutline
 ];
 
 export function provideNzIcons(): EnvironmentProviders {
