@@ -1,6 +1,6 @@
 <nz-layout class="min-h-[100dvh]">
   <nz-sider class="absolute h-[100dvh] lg:relative z-[1000]" nzBreakpoint="lg"
-            nzCollapsible [nzCollapsedWidth]="50" [(nzCollapsed)]="isCollapsed">
+            nzCollapsible [nzCollapsedWidth]="60" [(nzCollapsed)]="isCollapsed">
     <ul nz-menu nzMode="inline" nzTheme="dark" class="overflow-auto">
       <li nz-menu-item [nzDisabled]="true" class="cursor-default flex items-center">
         <span nz-icon>
@@ -35,7 +35,8 @@
           <li nz-menu-item>Team Leave</li>
         </ul>
       </li>
-      <li nz-submenu nzTitle="Setting" nzIcon="setting" [(nzOpen)]="openMap['SETTING']" (nzOpenChange)="openHandler('SETTING')">
+      <li nz-submenu nzTitle="Setting" nzIcon="setting" [(nzOpen)]="openMap['SETTING']"
+          (nzOpenChange)="openHandler('SETTING')">
         <ul>
           <li nz-menu-item>Option 11</li>
           <li nz-menu-item>Option 12</li>
