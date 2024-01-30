@@ -1,7 +1,7 @@
 <nz-layout class="min-h-[100dvh]">
   <nz-sider class="absolute h-[100dvh] lg:relative z-[1000]" nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="50"
             [(nzCollapsed)]="isCollapsed">
-    <ul nz-menu nzMode="inline" nzTheme="dark">
+    <ul nz-menu nzMode="vertical" nzInlineCollapsed="{{isCollapsed}}" nzTheme="dark">
       <li nz-menu-item [nzDisabled]="true" class="cursor-default flex items-center">
         <span nz-icon>
           <img ngSrc="favicon.ico" alt="logo" height="16" width="16">
