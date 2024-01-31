@@ -4,6 +4,8 @@ import {NzIconDirective} from "ng-zorro-antd/icon";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {NzTagComponent} from "ng-zorro-antd/tag";
 import {NzInputDirective, NzInputGroupComponent, NzInputGroupWhitSuffixOrPrefixDirective} from "ng-zorro-antd/input";
+import {NzBadgeComponent, NzRibbonComponent} from "ng-zorro-antd/badge";
+import {NzCardComponent} from "ng-zorro-antd/card";
 
 @Component({
   selector: 'app-employees',
@@ -14,7 +16,10 @@ import {NzInputDirective, NzInputGroupComponent, NzInputGroupWhitSuffixOrPrefixD
     NzTagComponent,
     NzInputGroupWhitSuffixOrPrefixDirective,
     NzInputDirective,
-    NzInputGroupComponent
+    NzInputGroupComponent,
+    NzRibbonComponent,
+    NzCardComponent,
+    NzBadgeComponent
   ],
   templateUrl: './employees.component.html',
   styleUrl: './employees.component.scss'
