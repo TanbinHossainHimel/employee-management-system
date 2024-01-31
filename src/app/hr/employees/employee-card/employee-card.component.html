@@ -1,0 +1,11 @@
+<nz-ribbon nzText="Tech">
+  <nz-card nzSize="small">
+    <h4 class="text-green-600 font-light">{{ employee.employee_id }}</h4>
+    <h3 class="font-medium">{{ employee.name }}</h3>
+    <a class="flex items-center gap-1 font-light">
+      <span nz-icon nzType="phone" nzTheme="twotone" [nzTwotoneColor]="'#4a044e'" [nzRotate]="90"></span>
+      <span>{{ employee.phone_number }}</span>
+    </a>
+    <h4 class="font-light">{{ employee.designation }}</h4>
+  </nz-card>
+</nz-ribbon>

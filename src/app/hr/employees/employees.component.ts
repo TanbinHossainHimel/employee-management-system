@@ -2,10 +2,11 @@ import {Component} from '@angular/core';
 import {NzButtonComponent} from "ng-zorro-antd/button";
 import {NzIconDirective} from "ng-zorro-antd/icon";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {NzTagComponent} from "ng-zorro-antd/tag";
 import {NzInputDirective, NzInputGroupComponent, NzInputGroupWhitSuffixOrPrefixDirective} from "ng-zorro-antd/input";
-import {NzBadgeComponent, NzRibbonComponent} from "ng-zorro-antd/badge";
-import {NzCardComponent} from "ng-zorro-antd/card";
+import {EmployeeCardComponent} from "./employee-card/employee-card.component";
+import {Employee} from "../../interfaces/employee";
+import {NzEmptyComponent} from "ng-zorro-antd/empty";
+import {HeaderTitleService} from "../../services/header-title/header-title.service";
 
 @Component({
   selector: 'app-employees',
@@ -13,13 +14,11 @@ import {NzCardComponent} from "ng-zorro-antd/card";
   imports: [
     NzButtonComponent,
     NzIconDirective,
-    NzTagComponent,
     NzInputGroupWhitSuffixOrPrefixDirective,
     NzInputDirective,
     NzInputGroupComponent,
-    NzRibbonComponent,
-    NzCardComponent,
-    NzBadgeComponent
+    EmployeeCardComponent,
+    NzEmptyComponent
   ],
   templateUrl: './employees.component.html',
   styleUrl: './employees.component.scss'
@@ -30,7 +29,8 @@ export class EmployeesComponent {
     file: ['', Validators.required]
   })
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private headerTitleService: HeaderTitleService) {
+    this.headerTitleService.setHeaderTitle('Employees');
     this.formFileUpload.valueChanges.subscribe(value => console.log(value));
   }
 
@@ -49,4 +49,32 @@ export class EmployeesComponent {
     this.formFileUpload.get('file')?.patchValue('');
     this.formFileUpload.get('file')?.markAsDirty();
   }
+
+  employees: Employee[] =
+    [
+      {
+        id: 0,
+        name: 'Md Tanbin Hossain Himel',
+        employee_id: 'TLM0329',
+        phone_number: '01534334914',
+        department: 'Tech',
+        designation: 'Junior Software Engineer'
+      },
+      {
+        id: 0,
+        name: 'Md Tanbin Hossain Himel',
+        employee_id: 'TLM0329',
+        phone_number: '01534334914',
+        department: 'Tech',
+        designation: 'Junior Software Engineer'
+      },
+      {
+        id: 0,
+        name: 'Md Tanbin Hossain Himel',
+        employee_id: 'TLM0329',
+        phone_number: '01534334914',
+        department: 'Tech',
+        designation: 'Junior Software Engineer'
+      },
+    ]
 }

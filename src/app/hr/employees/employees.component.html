@@ -15,30 +15,33 @@
 <!--    </nz-tag>-->
 <!--  }-->
 <!--</div>-->
-<div class="flex gap-2 items-center">
-  <div class="flex-auto"></div>
-  <div class="w-[200px]">
-    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
-      <input type="text" nz-input placeholder="Search Employee"/>
-    </nz-input-group>
-    <ng-template #suffixIconButton>
-      <button nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
-    </ng-template>
-  </div>
-  <button nz-button>Upload CSV</button>
+<!--<div class="flex gap-2 items-center">-->
+<!--  <div class="flex-auto"></div>-->
+<!--  <div class="w-[200px]">-->
+<!--    <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">-->
+<!--      <input type="text" nz-input placeholder="Search Employee"/>-->
+<!--    </nz-input-group>-->
+<!--    <ng-template #suffixIconButton>-->
+<!--      <button nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>-->
+<!--    </ng-template>-->
+<!--  </div>-->
+<!--  <button nz-button>Upload CSV</button>-->
+<!--</div>-->
+<div class="flex flex-col gap-1">
+  @for (employee of employees; track employee) {
+    <app-employee-card [employee]="employee"/>
+  } @empty {
+    <div class="flex items-center justify-center h-[480px]">
+      <nz-empty [nzNotFoundContent]="contentTpl">
+        <ng-template #contentTpl>
+          <h4 class="font-medium text-lg">No Employee Found</h4>
+          <div class="font-light">Add Employee to see their details</div>
+        </ng-template>
+      </nz-empty>
+    </div>
+  }
 </div>
 
-<nz-ribbon nzText="Tech">
-  <nz-card nzSize="small">
-    <h4 class="text-green-600">TLM0329</h4>
-    <h3 class="text-base font-medium">Md. Tanbin Hossain Himel</h3>
-    <a class="flex items-center gap-1 font-light">
-      <span nz-icon nzType="phone" nzTheme="twotone" [nzTwotoneColor]="'#4a044e'" [nzRotate]="90"></span>
-      <span>01534334914</span>
-    </a>
-    <h4 class="font-light">Jr Software Engineer</h4>
-  </nz-card>
-</nz-ribbon>
 
 <button class="absolute bottom-7 right-3" nz-button nzType="primary" nzShape="round">
   <span nz-icon nzType="plus" nzTheme="outline"></span>
