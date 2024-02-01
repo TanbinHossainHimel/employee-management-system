@@ -1,1 +1,33 @@
-<p>modal-manage-employee works!</p>
+<form [formGroup]="formManageEmployee" class="grid grid-cols-2 gap-3">
+  <nz-form-control nzHasFeedback class="col-span-2">
+    <input nz-input type="text" placeholder="Name" formControlName="name">
+  </nz-form-control>
+  <nz-form-control nzHasFeedback class="col-span-2">
+    <input nz-input type="email" placeholder="Email" formControlName="email">
+  </nz-form-control>
+  <nz-form-control nzHasFeedback class="col-span-2">
+    <input nz-input type="tel" placeholder="Phone" formControlName="phone">
+  </nz-form-control>
+  <nz-form-control class="col-span-1">
+    <nz-date-picker [nzInputReadOnly]="true" nzPlaceHolder="Joining Date" class="w-full" formControlName="joiningDate"/>
+  </nz-form-control>
+  <nz-form-control class="col-span-1">
+    <nz-date-picker [nzInputReadOnly]="true" nzPlaceHolder="Date of Birth" class="w-full"
+                    formControlName="dateOfBirth"/>
+  </nz-form-control>
+  <nz-form-control class="col-span-1">
+    <nz-select class="w-full" nzPlaceHolder="Department">
+      <nz-option nzValue="jack" nzLabel="Tech"></nz-option>
+      <nz-option nzValue="lucy" nzLabel="Product"></nz-option>
+    </nz-select>
+  </nz-form-control>
+  <nz-form-control class="col-span-1">
+    <nz-select class="w-full" nzPlaceHolder="Team" formControlName="team">
+      <nz-option nzValue="jack" nzLabel="Tech"></nz-option>
+      <nz-option nzValue="lucy" nzLabel="Product"></nz-option>
+    </nz-select>
+  </nz-form-control>
+  <nz-form-control nzHasFeedback class="col-span-2">
+    <input nz-input type="tel" placeholder="Employee ID" formControlName="employeeId">
+  </nz-form-control>
+</form>

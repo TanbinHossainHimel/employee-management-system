@@ -11,10 +11,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {socialAuth} from "./providers/social-auth.provider";
 import {provideNzIcons} from './providers/nz-zorro-icons.provider';
+import {NzModalModule} from "ng-zorro-antd/modal";
 
 registerLocaleData(en);
-
-
 
 
 export const appConfig: ApplicationConfig = {
@@ -23,7 +22,9 @@ export const appConfig: ApplicationConfig = {
     provideNzI18n(en_US),
     importProvidersFrom(FormsModule),
     importProvidersFrom(HttpClientModule),
+    importProvidersFrom(NzModalModule),
     provideAnimations(),
-    socialAuth,
-    provideNzIcons()]
+    provideNzIcons(),
+    socialAuth
+  ]
 };
