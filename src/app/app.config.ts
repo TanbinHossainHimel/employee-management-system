@@ -12,6 +12,7 @@ import {provideAnimations} from '@angular/platform-browser/animations';
 import {socialAuth} from "./providers/social-auth.provider";
 import {provideNzIcons} from './providers/nz-zorro-icons.provider';
 import {NzModalModule} from "ng-zorro-antd/modal";
+import {interceptorProvider} from "./providers/interceptor.provider";
 
 registerLocaleData(en);
 
@@ -25,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(NzModalModule),
     provideAnimations(),
     provideNzIcons(),
-    socialAuth
+    socialAuth,
+    interceptorProvider
   ]
 };
