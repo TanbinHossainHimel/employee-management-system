@@ -9,6 +9,10 @@ export class jwtInterceptor implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    return next.handle(req);
+    const jwt = 'I have no jwt';
+    const newReq = req.clone({
+      setHeaders: {Authorization: jwt},
+    });
+    return next.handle(newReq);
   }
 }
