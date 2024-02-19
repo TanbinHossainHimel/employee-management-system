@@ -10,6 +10,7 @@ import {
   AuditOutline,
   TeamOutline,
   SettingOutline,
+  MailTwoTone
 } from '@ant-design/icons-angular/icons';
 
 
@@ -22,6 +23,7 @@ const icons: IconDefinition[] = [
   AuditOutline,
   TeamOutline,
   SettingOutline,
+  MailTwoTone
 ];
 
 export function provideNzIcons(): EnvironmentProviders {
