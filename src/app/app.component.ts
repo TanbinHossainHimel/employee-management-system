@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {EncryptDecryptService} from "./services/encrypt-decrypt/encrypt-decrypt.service";
-import {UserLayoutComponent} from "./layout/user-layout/user-layout.component";
+import {UserUiComponent} from "./ui/user-ui/user-ui.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, UserLayoutComponent],
+  imports: [CommonModule, UserUiComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

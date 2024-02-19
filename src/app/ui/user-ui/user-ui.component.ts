@@ -1,32 +1,31 @@
 import {Component} from '@angular/core';
 import {HeaderComponent} from "../../header/header.component";
 import {NgOptimizedImage} from "@angular/common";
-import {NzContentComponent, NzFooterComponent, NzLayoutComponent, NzSiderComponent} from "ng-zorro-antd/layout";
+import {NzContentComponent, NzLayoutComponent, NzSiderComponent} from "ng-zorro-antd/layout";
 import {NzIconDirective} from "ng-zorro-antd/icon";
 import {NzMenuDirective, NzMenuItemComponent, NzSubMenuComponent} from "ng-zorro-antd/menu";
 import {RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
-  selector: 'app-user-layout',
+  selector: 'app-user-ui',
   standalone: true,
   imports: [
     HeaderComponent,
     NgOptimizedImage,
     NzContentComponent,
-    NzFooterComponent,
     NzIconDirective,
     NzLayoutComponent,
     NzMenuDirective,
     NzMenuItemComponent,
     NzSiderComponent,
     NzSubMenuComponent,
+    RouterLink,
     RouterOutlet,
-    RouterLink
   ],
-  templateUrl: './user-layout.component.html',
-  styleUrl: './user-layout.component.scss'
+  templateUrl: './user-ui.component.html',
+  styleUrl: './user-ui.component.scss'
 })
-export class UserLayoutComponent {
+export class UserUiComponent {
   isCollapsed = false;
 
   openMap: { [name: string]: boolean } = {
